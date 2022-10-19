@@ -1,0 +1,8 @@
+export const USER_DATA = 'USER_DATA';
+export const UPDATE_USER_DATA = 'UPDATE_USER_DATA';
+export const GET_USER_DATA = 'GET_USER_DATA';
+export const GET_NFT_METADATA = 'GET_NFT_METADATA';
+export const GET_TOKEN_HISTORY ="GET_TOKEN_HISTORY";
+export const SET_TOKEN = "SET_TOKEN";
+export const CLEAR_AUTH_REQUEST = "CLEAR_AUTH_REQUEST";
+export const RESET_STORE = "RESET_STORE";
