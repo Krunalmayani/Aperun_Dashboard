@@ -1,5 +1,4 @@
 import { filter } from 'lodash';
-import { sentenceCase } from 'change-case';
 import { useEffect, useState } from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import moment from 'moment';
@@ -9,7 +8,6 @@ import {
   Card,
   Table,
   Stack,
-  Avatar,
   Button,
   Checkbox,
   TableRow,
@@ -22,7 +20,6 @@ import {
 } from '@mui/material';
 // components
 import Page from '../components/Page';
-import Label from '../components/Label';
 import Scrollbar from '../components/Scrollbar';
 import Iconify from '../components/Iconify';
 import SearchNotFound from '../components/SearchNotFound';
@@ -209,10 +206,8 @@ export default function User() {
                         <TableCell align="left">{moment(created_date).format('MM/DD/YYYY HH:mm:ss')}</TableCell>
                         <TableCell align="left">{moment(updated_date).format('MM/DD/YYYY HH:mm:ss')}</TableCell>
                         <TableCell align="right">
-                          <UserMoreMenu onPressEditRow={() => navigate('/dashboard/userDetail', {
-                            replace: true,
-                            state: row
-                            },
+                          <UserMoreMenu onPressEditRow={() => navigate('/dashboard/user/userDetail', {
+                            replace: true,  state: row},
                           )} />
                         </TableCell>
                       </TableRow>

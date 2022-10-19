@@ -26,7 +26,7 @@ export default function Router() {
       children: [
         { path: 'app', element: <DashboardApp /> },
         { path: 'user', element: <User /> },
-        { path: 'userDetail', element: <UserDetailsPage /> },
+        { path: 'user/userDetail', element: <UserDetailsPage /> },
         { path: 'withdrawHisotry', element: <WithdrawHisotryPage /> },
       ],
     },
