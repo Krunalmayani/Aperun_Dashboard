@@ -32,7 +32,7 @@ export const logIn = (body, callback) => async (dispatch) => {
     if (response?.data?.success === true) {
       dispatch({ type: USER_DATA, payload: response?.data?.user })
       dispatch({ type: SET_TOKEN, payload: response?.data?.token })
-      localStorage.setItem('token', JSON.stringify(response.data.token)?.replace(/"/g, ''));
+      localStorage.setItem('token', JSON.parse(response?.data?.token));
       showNotification('success', 'login Successfully')
       callback();
     } else {
@@ -53,8 +53,6 @@ export const register = (body, callback) => async (dispatch) => {
     if (response?.data?.success === true) {
 
       dispatch({ type: USER_DATA, payload: response?.data?.user })
-      dispatch({ type: SET_TOKEN, payload: response?.data?.token })
-      localStorage.setItem('token', JSON.stringify(response.data.token)?.replace(/"/g, ''));
       showNotification('success', 'register Successfully')
       callback();
     } else {

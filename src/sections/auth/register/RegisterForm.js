@@ -46,7 +46,7 @@ export default function RegisterForm() {
   } = methods;
 
   const onSubmit = async (values) => {
-    const navVal = () => navigate('/dashboard', { replace: true })
+    const navVal = () => navigate('/', { replace: true })
     dispatch(register(values, navVal))
   };
 
